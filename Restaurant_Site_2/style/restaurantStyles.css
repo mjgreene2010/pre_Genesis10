@@ -1,0 +1,39 @@
+@font-face {
+  font-family: AsparagusSprouts;
+  src: url('AsparagusSprouts.ttf');
+}
+
+body {
+  background-color: lightblue;
+}
+
+nav {
+  background-color: tan;
+  padding: 10px;
+}
+
+nav .btn {
+  background-color: blue;
+  color: white;
+}
+
+nav .btn:visited {
+  color: gray;
+}
+
+nav .btn:hover {
+  font-weight: bold;
+  color: black;
+}
+
+.jumbotron {
+  color: blue;
+  background-color: tan;
+  border: 5px midnightblue;
+  font-family: AsparagusSprouts, Arial, sans-serif;
+  font-size: 75px;
+}
+
+#footer {
+  font-size: 25px;
+}
