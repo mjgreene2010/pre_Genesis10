@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script type="text/JavaScript" src="luckySevens.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Lucky Sevens</title>
+
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+
+</head>
+
+<body>
+    <div class=container-fluid align="center">
+        <header>
+            <h1>Lucky Sevens</h1>
+        </header>
+
+        <br />
+
+        <form name="luckyFrom" id="lucky-form" onsubmit="return play()">
+            <div class="form-group row justify-content-md-center">
+                <label for="starting-bet" class="col-form-label col-2">Starting Bet:</label>
+                <div class="col-2">
+                    <input type='number' class="form-control" id="initial-starting-bet">
+                </div>
+            </div>
+            <button type="submit" id="submitButton" class="btn btn-outline-dark col-1">Play</button>
+        </form>
+
+
+
+        <hr />
+
+        <h1>Results</h1>
+
+        <table class="table table-striped table-bordered" name="results" id="results">
+            <thead>
+                <tr>
+
+                </tr>
+            </thead>
+            <tbody class="tbody" name="tbody" id="tbody">
+                <tr id='tr'>
+                    <td><span id="starting-bet">Starting Bet</span></td>
+                    <td><span name="starting-bet-number" id="starting-bet-number"></span></td>
+                </tr>
+                <tr>
+                    <td><span id="total-rolls">Total Rolls Before Going Broke</span></td>
+                    <td><span id="total-rolls-number">#</span></td>
+                </tr>
+                <tr>
+                    <td><span id="highest-amount-won">Highest Amount Won</span></td>
+                    <td><span id="highest-amount-won-number">$</span></td>
+                </tr>
+                <tr>
+                    <td><span id="roll-count-at-highest-amount-won">Roll Count at Highest Amount Won</span></td>
+                    <td><span id="roll-count-at-highest-amount-won-number"></span>#</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
