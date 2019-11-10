@@ -24,7 +24,7 @@
 
         <br />
 
-        <form name="luckyFrom" id="lucky-form" onsubmit="return play()">
+        <form name="luckyFrom" id="lucky-form" onsubmit="return validateBet()">
             <div class="form-group row justify-content-md-center">
                 <label for="starting-bet" class="col-form-label col-2">Starting Bet:</label>
                 <div class="col-2">
@@ -53,15 +53,15 @@
                 </tr>
                 <tr>
                     <td><span id="total-rolls">Total Rolls Before Going Broke</span></td>
-                    <td><span id="total-rolls-number">#</span></td>
+                    <td><span id="total-rolls-number"></span></td>
                 </tr>
                 <tr>
                     <td><span id="highest-amount-won">Highest Amount Won</span></td>
-                    <td><span id="highest-amount-won-number">$</span></td>
+                    <td><span id="highest-amount-won-number"></span></td>
                 </tr>
                 <tr>
                     <td><span id="roll-count-at-highest-amount-won">Roll Count at Highest Amount Won</span></td>
-                    <td><span id="roll-count-at-highest-amount-won-number"></span>#</td>
+                    <td><span id="roll-count-at-highest-amount-won-number"></span></td>
                 </tr>
             </tbody>
         </table>
