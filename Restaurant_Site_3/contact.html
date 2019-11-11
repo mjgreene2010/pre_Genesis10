@@ -24,18 +24,6 @@
     <link rel="stylesheet" href="style/restaurantStyles.css" type="text/css">
 
     <script type="text/JavaScript" defer src="restaurant.js"></script>
-    <script>
-
-        validateTest = (id) => {
-            if ($("#" + id).val() == null || $("#" + id).val() == "") {
-                alert("Validation E")
-            }
-        }
-
-        // $(document).ready(
-        //     function
-        // );
-    </script>
 
     <noscript>
         <div align="center" style="padding: 10px; font-size:25px">
@@ -46,8 +34,8 @@
 
 </head>
 
-<body align="center">
-    <div class="container-fluid">
+<body class="container-fluid">
+    <div class="container">
         <p>Contact Us</p>
 
         <hr />
@@ -84,14 +72,14 @@
 
         <hr />
 
-        <form id="contact-form" onclick="return checkingForm()" onchange="return handleInputChange()">
-
+        <form id="contact-form" oninput="return checkingForm()" onclick="return checkingForm3() || checkingForm2()">
+            <!-- onclick="return checkingForm2() "> -->
 
             <div class="form-group row" action="">
-                <div class="col-3"></div>
-                <label class="control-label col-3" for="name">Name: </label>
+                <div class="col-sm-3"></div>
+                <label class="control-label col-sm-3" for="name">Name: </label>
                 <div class="help-block">
-                    <input type="text" id="name" name="name" />
+                    <input type="text" id="name" name="name" required />
                     <span id="nameError"></span>
                 </div>
             </div>
@@ -100,10 +88,10 @@
             <br /><br />
 
             <div class="row">
-                <div class="col-3"></div>
-                <label class="col-3" for="email">Email: </label>
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3" for="email">Email: </label>
                 <div class="help-block">
-                    <input type="text" id="email" name="email" />
+                    <input type="email" id="email" name="email" required />
                     <span id="emailError"></span>
                 </div>
             </div>
@@ -111,10 +99,10 @@
             <br /><br />
 
             <div class="row">
-                <div class="col-3"></div>
-                <label class="col-3" for=" phone">Phone: </label>
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3" for=" phone">Phone: </label>
                 <div class="help-block">
-                    <input type="text" id="phone" name="phone">
+                    <input type="number" id="phone" name="phone" placeholder="numbers only" required>
                     <span id="phoneError"></span>
                 </div>
             </div>
@@ -122,15 +110,15 @@
             <br /><br />
 
             <div class="row">
-                <div class="col-3"></div>
-                <label class="col-3 for=" contact">Reason for Inquiry:</label>
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3 for=" contact">Reason for Inquiry:</label>
                 <select id="reason" name="reason">
                     <option value="" selected>Choose...</option>
                     <option value="catering">Catering</option>
                     <option value="private-party">Private Party</option>
                     <option value="feedback">Feedback</option>
                     <option vaule="other">Other</option>
-                </select>
+                </select>&nbsp;
                 <span id="reasonError"></span>
 
             </div>
@@ -138,22 +126,22 @@
             <br /><br />
 
             <div class="row">
-                <div class="col-3"></div>
-                <label class="col-3" for="info">Additional Information:</label>
-                <textarea id="addInfo" name="addInfo"></textarea><br />
-                <span id="addInfoError"></span>
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3" for="info">Additional Information:</label>
+                <textarea id="addInfo" name="addInfo"></textarea>&nbsp;
+                <span type="text" id="addInfoError"></span>
             </div>
 
             <br /><br />
 
             <div class="row">
-                <div class="col-3"></div>
-                <label class="col-4">Have you been to the restaurant?</label>
-                <div class="col-3">
+                <div class="col-sm-3"></div>
+                <label class="col-sm-4">Have you been to the restaurant?</label>
+                <div class="col-sm-3">
                     <input type="radio" name="question" value='Yes'>
                     <label-radio for="yes">Yes</label-radio>
                     <input type="radio" name="question" value='No'>
-                    <label-radio>No</label-radio>
+                    <label-radio>No</label-radio>&nbsp;
                     <span id="questionError"></span>
 
                 </div>
@@ -162,36 +150,39 @@
             <br /><br />
 
             <div class="row">
-                <div class="col-3"></div>
-                <label class="col-3">Best days to contact you:</label>
-                <div class="col-3">
-                    <input type="checkbox" name="day">
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3">Best days to contact you:</label>
+                <div class="col-sm-3">
+                    <input type="checkbox" id="day" name="day">
                     <label-checkbox for="M">M</label-checkbox>
-                    <input type="checkbox" name="day">
+                    <input type="checkbox" id="day" name="day">
                     <label-checkbox for="tuesday">T</label-checkbox>
-                    <input type="checkbox" name="day">
+                    <input type="checkbox" id="day" name="day">
                     <label-checkbox for="wednesday">W</label-checkbox>
-                    <input type="checkbox" name="day">
+                    <input type="checkbox" id="day" name="day">
                     <label-checkbox for="thursday">Th</label-checkbox>
-                    <input type="checkbox" name="day">
+                    <input type="checkbox" id="day" name="day">
                     <label-checkbox for="friday">F</label-checkbox>
                 </div>
+                <span id="dayError"></span>
             </div>
 
             <br /><br />
 
             <div class="row">
-                <div class="col-5"></div>
-                <input type="submit" name="submit" value="Request" />
+                <div class="col-sm-5"></div>
+                <input type="submit" name="submit" value="Request" onsubmit="return checkingForm()" />
             </div>
+        </form>
+
+        <hr />
+
+        <footer class="blockquote text-center">
+            123 Restaurant Street, Dallas, TX 75222 <br />
+            (469)555-5555
+        </footer>
+
     </div>
-    </form>
-
-    <footer class="blockquote text-center">
-        123 Restaurant Street, Dallas, TX 75222 <br />
-        (469)555-5555
-    </footer>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -203,7 +194,6 @@
         crossorigin="anonymous"></script>
     </div>
 </body>
-<hr />
 
 
 </html>

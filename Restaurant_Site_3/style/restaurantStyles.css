@@ -3,8 +3,16 @@
   src: url('AsparagusSprouts.ttf');
 }
 
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body {
   background-color: lightblue;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 nav {
@@ -50,9 +58,9 @@ hr {
 .jumbotron {
   color: blue;
   background-color: rgb(157, 157, 216);
-  font-size: 45px;
+  font-size: 30px;
   text-align: center;
-  height: 250px;
+  height: relative;
 }
 
 .carousel {
@@ -62,4 +70,14 @@ hr {
 
 #help-block {
   display: block;
+}
+
+#nameError,
+#emailError,
+#phoneError,
+#reasonError,
+#addInfoError,
+#questionError,
+#dayError {
+  color: green;
 }
