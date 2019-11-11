@@ -31,19 +31,18 @@ rolling = gameMoney => {
       gameMoney -= 1;
     }
   }
-
+  document.getElementById('results').style.display = 'table-row';
+  document.getElementById('results-header').style.display = '';
   document.getElementById('total-rolls-number').innerText = totalRolls;
-
   document.getElementById('highest-amount-won-number').innerText =
     '$' + highest;
-
   document.getElementById(
     'roll-count-at-highest-amount-won-number'
   ).innerText = highCount;
 
-  // if (gameMoney === 0) {
-  //   alert('Game Over');
-  // }
+  if (gameMoney === 0) {
+    document.getElementById('game-over').innerText = 'GAME OVER!!!';
+  }
 };
 
 validateBet = () => {
@@ -64,5 +63,6 @@ validateBet = () => {
     '$' + `${startingBet}`;
 
   rolling(gameMoney);
+
   return false;
 };

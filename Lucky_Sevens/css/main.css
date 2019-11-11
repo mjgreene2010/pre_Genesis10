@@ -2,7 +2,15 @@ hr {
   width: 35%;
 }
 
-.table {
-  width: 50%;
-  outline: 10px;
+#game-over {
+  color: red;
+}
+
+thead {
+  border: none;
+}
+
+.table.no-border tr td,
+.table.no-border tr th {
+  border-width: 0;
 }
